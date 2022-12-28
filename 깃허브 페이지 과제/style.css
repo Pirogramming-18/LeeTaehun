@@ -1,0 +1,264 @@
+/* global part */
+
+*{  /*모든 태그*/
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /* font-family: -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif; */
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+#background{
+    position: absolute;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background: url(https://colorate.azurewebsites.net/SwatchColor/3B404B);
+    z-index: -100;
+}
+
+
+.inline-block{
+    display: inline-block;
+}
+
+.blind{
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+}
+
+.center-align{
+    margin: 0 auto;
+    width: 1080px;
+}
+
+/* header part */
+
+#header-top ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#header-top{
+    height: 20px;
+    position: relative;
+}
+
+#header-left ul{
+    margin-left: 100px;
+}
+
+#header-right ul{
+    margin-right: 100px;
+}
+
+#header-left li{
+    float: left;
+    vertical-align: top;
+}
+
+#header-right li{
+    float: right;
+    vertical-align: top;
+}
+
+#header-left span{
+    color: white;
+    letter-spacing: 1px;
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px; 
+}
+
+#header-right span{
+    color: white;
+    letter-spacing: 1px;
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px; 
+}
+
+#github-mark{
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    margin-left: 60px;
+    top: 30px;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#search-button{
+    vertical-align: top;
+    text-align: left;
+    background-color: rgb(156, 153, 153);
+    opacity: 0.5;
+    border: 0;
+    border-radius: 7px;
+    width: 230px;
+    height: 40px;
+    padding-bottom: 20px;
+}
+
+#search-input{
+    background-color: rgb(200, 195, 195);
+    width: 230px;
+    height: 40px;
+    border: 0;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+/* main part */
+
+main{
+    display:flex;
+    justify-content:space-evenly;
+    text-align:left;
+    height: 100vh;
+    align-items: center;
+
+}
+
+/* main part --> description part */
+
+#first-phrase{
+    color: white;
+    font-size: 400%;
+    font-weight: 550;
+}
+
+#description{
+    position: absolute;
+    top: 200px;
+    right: 500px;
+    display: inline-block;
+    width: 700px;
+    height: 500px;
+    vertical-align: top;
+}
+
+#description p{
+    color: rgb(170, 167, 167);
+    font-size: 18px;
+    line-height: 30px;
+}
+
+
+/* main part --> input block part */
+
+#input-block{
+    background-color: white;
+    position: absolute;
+    left: 800px;
+    top: 80px;
+    display: inline-block;
+    width: 500px;
+    height: 520px;
+    border-radius: 6px;
+    vertical-align: top;
+}
+
+#input-block fieldset {
+    margin-left: 20px;
+    width: 430px;
+    height: 50px;
+    border: 2px solid rgb(239, 233, 233);
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+#input-block fieldset input{
+    border: none;
+    padding: 0;
+    outline: none;
+    vertical-align: top;
+    width: 430px;
+    height: 40px;
+}
+#input-block .input-label{
+    font-size: 16px;
+    margin:20px;
+    line-height: 30px;
+    font-weight: 500;
+}
+
+#first-label{
+    margin-top: 30px;
+}
+
+#password-standard{
+    color: rgb(59, 57, 57);
+    font-size: 14px;
+    margin-left: 24px;
+}
+
+#signUp-button{
+    display: inline-block;
+    width: 450px;
+    height: 80px;
+    border: none;
+    border-radius: 8px;
+    margin-left: 25px; 
+    vertical-align: top;
+    background: #03cf5d;
+    
+}
+#signUp-button span{
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 600;
+}
+
+#precaution{
+    margin-top: 35px;
+    margin-left: 30px;
+    color: gray;
+    font-size: 13px;
+}
+
+.input-field:placeholder{
+    background-color: rgb(125, 108, 141);
+}
+
+
+/* footer part */
+#foot{
+    position: absolute;
+    bottom: 0px;
+    background-color: white;
+    width: 100vw;
+    height: 80px;
+}
+
+#footer-image{
+    float: right;
+    display: block;
+    right: -500px;
+    width: 300px;
+    height: 80px;
+
+}
+

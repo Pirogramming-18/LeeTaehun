@@ -29,6 +29,15 @@ html, body{
     margin-bottom: 8px;
 }
 
+#main-shopping ifram{
+    float: left;
+    width: 332px;
+    height: 837px;
+    background: white;
+    margin-bottom: 8px;
+}
+
+
 #main-second-block .float-left:last-child{
     width: 332px;
     vertical-align: top;
