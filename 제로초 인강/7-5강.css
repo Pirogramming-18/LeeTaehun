@@ -408,6 +408,32 @@ nav ul{
 
 }
 
+#main-login .login-wrapper {
+    padding: 15px 25px;
+}
+
+#main-login .login-wrapper a {
+    display: block;
+}
+
+
+#main-login .login-signup:hover{
+    text-decoration: underline;
+}
+
+#main-login .login-image{
+    background: url(./images/sp_login.png) 0 -47px no-repeat;
+    display: inline-block;
+    width: 280px;
+    height: 37px;
+}
+
+
 #main-login .login-signup {
     float: right;
+    margin-top: 12px;
+    font-size: 12px;
+    line-height: 38px;
+    color: #666;
+    text-decoration: none;
 }
