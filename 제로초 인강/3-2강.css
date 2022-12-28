@@ -1,0 +1,49 @@
+.blind{
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+}
+
+#header-center{
+    margin: 0 auto;
+    width: 1080px;
+}
+
+#header-search a{
+    text-decoration: none;
+}
+
+#header-search h1{
+    width: 198px;
+    height: 48px;
+    display: inline-block;
+    text-indent: 100%;
+    overflow: hidden;
+    /* background-image: url(./images/sp_search.png);
+    background-position: -4px -10px;
+    background-repeat: no-repeat; */
+    background: url(./images/sp_search.png) -4px -4px no-repeat;
+}
+
+#header-search h2{
+    display: none;
+
+}
+
+#header-search fieldset{
+    margin-left: 20px;
+    padding: 12px 0 12px 0; 
+    width: 521px;
+    height: 49px;
+    display: inline-block;
+    border: 2px solid #03cf5d;
+}
+
+/*
+#header-center h1{
+    자손 선택자
+}
+*/
