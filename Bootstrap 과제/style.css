@@ -158,8 +158,8 @@ a{
 #message-container{
     height: 20rem;
 
-
-    padding: 0 16rem;
+    width: 88rem;
+    /* padding: 0 16rem; */
 }
 
 
