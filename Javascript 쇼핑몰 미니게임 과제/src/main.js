@@ -21,11 +21,32 @@ function createHTMLString(item) {
     `;
 }
 
+function onButtonClick(event, items) {
+  const datasest = event.target.datset;
+  const key = data.key;
+  const value = dataset.value;
+
+  if (key == null || value == null) {
+    return;
+  }
+
+  const filtered = items.filter((item) => item[key] === value);
+  console.log(filtered);
+  displayItems(filtered);
+}
+
+function setEventListeners(items) {
+  const logo = document.querySelector(".logo");
+  const buttons = document.querySelector(".buttons");
+  logo.addEventListener("click", () => displayItems(items));
+  buttons.addEventListener("click", (event) => onButtonClick(event, items));
+}
+
 // main
 loadItems()
   .then((items) => {
     console.log(items);
     displayItems(items);
-    // setEventListeners(items);
+    setEventListeners(items);
   })
   .catch(console.log);
