@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>STOP WATCH</title>
+  </head>
+  <body>
+    <h3 class="mt-5 py-5 head">피로그래밍 스톱워치</h3>
+    <div id="container-watch">
+      <!-- time -->
+      <div class="mt-5 py-3 time bg-white">01:00</div>
+
+      <!-- buttons -->
+      <div class="mb-5 pb-3 container-btn">
+        <div class="mx-1 mt-3 py-3 btn" id="start">start</div>
+        <div class="mx-1 mt-3 py-3 btn" id="stop">stop</div>
+        <!-- <button class="btn" id="reset">reset</button> -->
+        <div class="mx-1 mt-3 py-3 btn" id="reset">reset</div>
+      </div>
+    </div>
+    <!-- record -->
+    <div class="mt-4 pt-2 record">
+      구간기록
+      <a href="" style="color: black" class="me-2 clear"
+        ><i class="fa-solid fa-trash"></i
+      ></a>
+      <ul></ul>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/0bf4205c88.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

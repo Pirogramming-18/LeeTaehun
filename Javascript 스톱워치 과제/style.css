@@ -1,0 +1,57 @@
+:root {
+  --color-background: rgb(183, 197, 188);
+  --color-btn: rgb(216, 216, 219);
+}
+
+body,
+#container-watch,
+#container-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.time {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  width: 16rem;
+  border-radius: 1rem;
+}
+
+#container-watch {
+  width: 20rem;
+}
+
+#container-btn {
+  flex-direction: row;
+}
+
+.head {
+  font-weight: 700;
+}
+
+#container-watch {
+  background-color: var(--color-background);
+  border-radius: 1.5rem;
+}
+
+.btn {
+  background-color: var(--color-btn);
+  border-radius: 1rem;
+}
+
+.record {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  width: 20rem;
+  background-color: var(--color-background);
+  border-top-right-radius: 2rem;
+  border-top-left-radius: 2rem;
+}
+
+.clear {
+  float: right;
+}
