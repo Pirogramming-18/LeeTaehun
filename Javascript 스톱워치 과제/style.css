@@ -1,3 +1,5 @@
+@import "reset.css";
+
 :root {
   --color-background: rgb(183, 197, 188);
   --color-btn: rgb(216, 216, 219);
@@ -53,5 +55,29 @@ body,
 }
 
 .clear {
-  float: right;
+  position: relative;
+  right: -75px;
+  background-color: var(--color-background);
+  border: none;
+}
+
+ul {
+  width: 20rem;
+  text-align: center;
+}
+
+li {
+  padding: 0.7rem 0 0.1rem 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+#check-all {
+  position: relative;
+  right: 80px;
+}
+
+.check {
+  position: relative;
+  right: 120px;
 }
