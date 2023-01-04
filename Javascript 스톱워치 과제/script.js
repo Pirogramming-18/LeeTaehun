@@ -8,9 +8,9 @@ const reset = document.getElementById("reset");
 const $checkAll = document.querySelector("#check-all");
 const clearBtn = document.querySelector(".clear");
 
-function printTime(count) {
-  let sec = parseInt(count / 1000);
-  let milisec = parseInt(count / 100) % 100;
+function printTime() {
+  let sec = parseInt(count / 60);
+  let milisec = count % 60;
   time.textContent =
     String(sec).padStart(2, "0") + ":" + String(milisec).padStart(2, "0");
 }
@@ -18,8 +18,8 @@ function printTime(count) {
 function startClock() {
   if (active) {
     count++;
-    printTime(count);
-    timerId = setTimeout(startClock, 1);
+    printTime();
+    setTimeout(startClock, 1000);
   }
 }
 
@@ -42,27 +42,6 @@ function stopClock() {
   li.appendChild(text);
   document.getElementById("record-list").appendChild(li);
 }
-
-start.addEventListener("click", () => {
-  active = true;
-  startClock();
-});
-
-$stop.addEventListener("click", () => {
-  stopClock();
-});
-
-reset.addEventListener("click", () => {
-  resetClock();
-});
-
-$checkAll.addEventListener("click", () => {
-  allCheckRecord();
-});
-
-clearBtn.addEventListener("click", () => {
-  removeRecord();
-});
 
 function allCheckRecord() {
   const $check = document.querySelectorAll(".check");
@@ -93,57 +72,23 @@ function removeRecord() {
   }
 }
 
-// function clearRecord() {
-//   const recordList = document.getElementById("record-list");
-//   recordList.forEach((element) => {
-//     console.log(element);
-//   });
-// }
+start.addEventListener("click", () => {
+  active = true;
+  startClock();
+});
 
-// const clear = document.querySelector(".clear");
+$stop.addEventListener("click", () => {
+  stopClock();
+});
 
-// clear.addEventListener("click", () => {
-//   clearRecord();
-// });
+reset.addEventListener("click", () => {
+  resetClock();
+});
 
-// let miliseconds = 0;
-// let sec, milisec;
-// let active = false;
-// const time = document.querySelector(".time");
-// const start = document.getElementById("start");
-// const stop = document.getElementById("stop");
-// const reset = document.getElementById("reset");
+$checkAll.addEventListener("click", () => {
+  allCheckRecord();
+});
 
-// function resetClock() {
-//   active = false;
-//   miliseconds = 0;
-//   reset.addEventListener("click", resetClock());
-//   time.innerText = "00:00";
-//   console.log("reset");
-// }
-
-// function startClock() {
-//   if (active == true) {
-//     miliseconds++;
-//     time.innerText = printTime();
-//   }
-// }
-
-// resetClock();
-
-// reset.addEventListener("click", resetClock());
-
-// // function stopClock() {}
-
-// // function clearRecord() {}
-
-// function printTime() {
-//   sec = parseInt(miliseconds / 1000);
-//   milisec = miliseconds % 1000;
-//   return String(sec).padStart(2, "0") + ":" + String(milisec).padStart(2, "0");
-// }
-
-// start.addEventListener("click", () => {
-//   active = true;
-//   setInterval(startClock, 1);
-// });
+clearBtn.addEventListener("click", () => {
+  removeRecord();
+});
