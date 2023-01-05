@@ -25,6 +25,7 @@ while not endGame:
       break
 
   if endGame:
+    print("playerB win!")
     break
 
   inputNum = input("부를 숫자의 개수를 입력하세요(1, 2, 3만 입력가능) :")
@@ -46,3 +47,6 @@ while not endGame:
     if num == 31:
       endGame = True
       break
+  if endGame:
+    print("playerA win!")
+    break
