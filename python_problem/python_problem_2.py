@@ -16,6 +16,7 @@ def Menu1(inputList):
   else:
     studentInformation[inputList[0]] = [int(inputList[1]), int(inputList[2])]
     print(studentInformation)
+    
 ##############  menu 2
 def Menu2():
     #학점 부여 하는 코딩
@@ -38,9 +39,23 @@ def Menu2():
     print(studentInformation)
           
 
-# ##############  menu 3
-# def Menu3():
-#     #출력 코딩
+##############  menu 3
+def Menu3():
+    #출력 코딩
+    allGradingComplete = True
+    if not studentInformation:
+      print("No student data!")
+    else:
+      for key in studentInformation:
+        if len(studentInformation[key]) != 3:
+          allGradingComplete = False
+      if allGradingComplete:
+        print("--------------------------------")
+        print("name      mid    final    grade")
+        print("--------------------------------")
+      for key2 in studentInformation:
+
+        print(f"{key2:<10}{studentInformation[key][0]:>3}{studentInformation[key][1]:>9}{studentInformation[key][2]:>9}")
 
 # ##############  menu 4
 # def Menu4():
@@ -72,9 +87,10 @@ while True :
         #"Grading to all students." 출력
         Menu2()
 
-    # elif choice == "3" :
-    #     #예외사항 처리(저장된 학생 정보의 유무, 저장되어 있는 학생들의 학점이 모두 부여되어 있는지)
-    #     #예외사항이 아닌 경우 3번 함수 호출
+    elif choice == "3" :
+        #예외사항 처리(저장된 학생 정보의 유무, 저장되어 있는 학생들의 학점이 모두 부여되어 있는지)
+        #예외사항이 아닌 경우 3번 함수 호출
+        Menu3()
 
     # elif choice == "4" :
     #     #예외사항 처리(저장된 학생 정보의 유무)
