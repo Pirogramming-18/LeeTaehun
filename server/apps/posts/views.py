@@ -8,6 +8,9 @@ def hello_world(request, *args, **kwargs):
 
 def posts_list(request, *args, **kwargs):
   posts = Post.objects.all()
+  text = request.GET.get("text")
+  if text:
+    posts = posts.filter(content__contains=text)  
   print({"posts":posts})
   return render(request, "posts/posts_list.html", {"posts": posts})
 
