@@ -13,3 +13,9 @@
 <br />
 <small> 수정일: {{post.updated_at}}</small>
 <br />
+
+<hr />
+<form action="/posts/{{post.id}}/delete" method="post">
+  {%csrf_token%}
+  <input type="submit" value="삭제하기" />
+</form>
