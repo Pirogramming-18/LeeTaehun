@@ -1,0 +1,10 @@
+<h1><a>myMoviereviews</a></h1>
+<a href="posts/create">Add a New review </a>
+<hr />
+
+{% comment %} 제목 개봉년도 장르 별점 {% endcomment %} {% for post in posts%}
+<h3><a href="/posts/{{post.pk}}">{{post.title}}</a></h3>
+<small>개봉년도 {{post.releaseYear}} </small>
+<small>장르 {{post.genre}} </small>
+<small>별점 {{post.rating}} </small>
+{% endfor%}
