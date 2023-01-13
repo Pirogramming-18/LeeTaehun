@@ -41,6 +41,7 @@ def posts_update(request: HttpRequest, pk, *args, **kwargs):
       post.review =request.POST["review"]
       post.director =request.POST["director"]
       post.actor =request.POST["actor"]
+      post.save()
       return redirect(f"/posts/{post.id}")
     
   return render(request, "posts/posts_update.html", {"post": post})
