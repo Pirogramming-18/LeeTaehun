@@ -1,0 +1,17 @@
+<h1>글 수정하기</h1>
+
+<form action="/posts/{{post.id}}/update" method="post">
+  {% csrf_token%}
+  <div>제목: <input name="title" value="{{post.title}}" /></div>
+  <div>개봉년도: <input name="releaseYear" value="{{post.releaseYear}}" /></div>
+  <div>장르: <input name="genre" value="{{post.genre}}" /></div>
+  <div>별점: <input name="rating" value="{{post.rating}}" /></div>
+  <div>러닝타임: <input name="runningTime" value="{{post.runningTime}}" /></div>
+  <div>리뷰:</div>
+  <textarea name="review">{{post.review}}</textarea>
+  <div>감독: <input name="director" value="{{post.director}}" /></div>
+  <div>배우: <input name="actor" value="{{post.actor}}" /></div>
+  <div>
+    <input type="submit" value="저장하기" />
+  </div>
+</form>

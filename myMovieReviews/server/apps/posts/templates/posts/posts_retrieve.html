@@ -1,6 +1,8 @@
+<a href="/">my Movie reviews</a>
+
 <h1>{{post.title}}</h1>
 
-<a href="posts/{{post.id}}/update">수정</a>
+<a href="/posts/{{post.id}}/update">수정</a>
 <form action="/posts/{{post.id}}/delete" method="post">
   {% csrf_token%}
   <input type="submit" value="삭제" />

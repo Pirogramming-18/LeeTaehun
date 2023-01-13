@@ -28,3 +28,25 @@ def posts_create(request: HttpRequest, *args, **kwargs):
     )
     return redirect("/")
   return render(request, "posts/posts_create.html")
+
+def posts_update(request: HttpRequest, pk, *args, **kwargs):
+  post = Post.objects.get(id=pk)
+  
+  if request.method == "POST":
+      post.title =request.POST["title"]
+      post.releaseYear =request.POST["releaseYear"]
+      post.genre =request.POST["genre"]
+      post.rating =request.POST["rating"]
+      post.runningTime =request.POST["runningTime"]
+      post.review =request.POST["review"]
+      post.director =request.POST["director"]
+      post.actor =request.POST["actor"]
+      return redirect(f"/posts/{post.id}")
+    
+  return render(request, "posts/posts_update.html", {"post": post})
+
+def posts_delete(request:HttpRequest, pk, *args, **kwargs):
+  if request.method == "POST":
+    post = Post.objects.get(id=pk)
+    post.delete()
+  return redirect("/")
