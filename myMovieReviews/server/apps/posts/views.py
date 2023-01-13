@@ -9,6 +9,11 @@ def posts_list(request: HttpRequest, *args, **kwargs):
   print({"posts": posts})
   return render(request, "posts/posts_list.html", {"posts": posts})
 
+def posts_retrieve(request: HttpRequest, pk, *args, **kwargs):
+  post = Post.objects.all().get(id=pk)
+  print(post)
+  return render(request, "posts/posts_retrieve.html", {"post":post})
+
 def posts_create(request: HttpRequest, *args, **kwargs):
   if request.method == "POST":
     Post.objects.create(

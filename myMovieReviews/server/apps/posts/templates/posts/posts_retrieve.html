@@ -1,0 +1,22 @@
+<h1>{{post.title}}</h1>
+
+<a href="posts/{{post.id}}/update">수정</a>
+<form action="/posts/{{post.id}}/delete" method="post">
+  {% csrf_token%}
+  <input type="submit" value="삭제" />
+</form>
+{% comment %} 개봉년도 감독 주연 장르 별점 러닝타임 리뷰 {% endcomment %}
+
+<small> 개봉년도: {{post.releaseYear}}</small>
+<br />
+<small> 감독: {{post.director}}</small>
+<br />
+<small> 주연: {{post.actor}}</small>
+<br />
+<small> 장르: {{post.genre}}</small>
+<br />
+<small> 별점: {{post.rating}}</small>
+<br />
+<small> 별점: {{post.runningTime}}</small>
+<br />
+<p>{{post.content}}</p>
